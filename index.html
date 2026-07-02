@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>index</title>
+<title>NEEL R JARIWALA // PORTFOLIO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Bebas+Neue&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -343,8 +343,59 @@ section { padding: 100px 0; }
   color: var(--green);
 }
 
+/* EXPERIENCE */
+#experience { background: var(--bg2); }
+
+.exp-timeline { position: relative; padding-left: 40px; display: flex; flex-direction: column; gap: 44px; }
+.exp-timeline::before {
+  content: '';
+  position: absolute; left: 0; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--cyan), var(--pink), transparent);
+}
+
+.exp-item { position: relative; }
+.exp-item::before {
+  content: '';
+  position: absolute; left: -46px; top: 6px;
+  width: 12px; height: 12px;
+  background: var(--cyan);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  box-shadow: var(--glow-c);
+}
+
+.exp-period {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; color: var(--pink);
+  letter-spacing: 2px; margin-bottom: 6px;
+}
+.exp-role {
+  font-family: 'Orbitron', monospace;
+  font-size: 17px; font-weight: 700;
+  color: var(--white); margin-bottom: 4px;
+}
+.exp-org {
+  font-size: 15px; color: var(--cyan);
+  font-weight: 600; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.exp-tag {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px; letter-spacing: 1.5px;
+  color: var(--dim);
+  border: 1px solid var(--border);
+  padding: 2px 8px;
+}
+.exp-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.exp-list li {
+  font-size: 14.5px; color: var(--text); font-weight: 300;
+  line-height: 1.7; padding-left: 18px; position: relative;
+}
+.exp-list li::before {
+  content: '▸'; position: absolute; left: 0; color: var(--green);
+}
+
 /* PROJECTS */
-#projects { background: var(--bg2); }
+#projects { background: var(--bg); }
 
 .projects-list { display: flex; flex-direction: column; gap: 32px; }
 
@@ -405,8 +456,59 @@ section { padding: 100px 0; }
   line-height: 1.8; font-weight: 300;
 }
 
+.project-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; letter-spacing: 2px;
+  color: var(--green);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,255,136,0.3);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.project-link:hover { color: var(--pink); border-color: var(--pink); }
+
+.other-projects-header {
+  margin-top: 60px; margin-bottom: 24px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px; letter-spacing: 4px;
+  color: var(--dim);
+  display: flex; align-items: center; gap: 16px;
+}
+.other-projects-header::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.mini-project-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 22px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.mini-project-card:hover {
+  border-color: rgba(0,229,255,0.3);
+  transform: translateY(-3px);
+}
+.mini-project-name {
+  font-family: 'Orbitron', monospace;
+  font-size: 14px; font-weight: 700;
+  color: var(--white); letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.mini-project-desc {
+  font-size: 13.5px; color: var(--text);
+  font-weight: 300; line-height: 1.6;
+  margin-bottom: 14px;
+}
+
 /* PUBLICATIONS */
-#publications { background: var(--bg); }
+#publications { background: var(--bg2); }
 
 .pub-list { display: flex; flex-direction: column; gap: 20px; }
 
@@ -583,6 +685,7 @@ footer {
   <div class="nav-links">
     <a href="#about">ABOUT</a>
     <a href="#skills">SKILLS</a>
+    <a href="#experience">EXPERIENCE</a>
     <a href="#projects">PROJECTS</a>
     <a href="#publications">PUBS</a>
     <a href="#education">EDU</a>
@@ -597,9 +700,9 @@ footer {
     <h1 class="hero-name">
       <span class="glitch" data-text="NEEL R JARIWALA">NEEL R JARIWALA</span>
     </h1>
-    <div class="hero-sub">PYTHON &nbsp;·&nbsp; SQL &nbsp;·&nbsp; MACHINE LEARNING &nbsp;·&nbsp; FULL-STACK</div>
+    <div class="hero-sub">PYTHON &nbsp;·&nbsp; SQL &nbsp;·&nbsp; ETL &amp; DATA PIPELINES &nbsp;·&nbsp; CLOUD &amp; BI</div>
     <p class="hero-desc">
-      Student with a strong passion for technology and data, actively enhancing skills through diverse projects and continuous learning. Building systems that turn raw data into real-world impact.
+      M.Sc. Data Science student building end-to-end data engineering systems — cloud-based ingestion, ETL pipelines, dimensional warehouses, and business intelligence reporting that turn raw data into real-world impact.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">VIEW PROJECTS</a>
@@ -615,9 +718,9 @@ footer {
     <h2 class="section-title">WHO AM I<span style="color:var(--green)">?</span></h2>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>I'm a Data Science student at Symbiosis Skills and Professional University, Pune — with a B.Sc. in Information Technology from Uka Tarsadia University. I thrive at the intersection of data engineering, machine learning, and product thinking.</p>
-        <p>My work spans full-stack development, AI-based platforms, and data pipelines. I'm committed to mastering new tools and applying skills to solve real-world challenges — from recruitment automation to e-commerce trend prediction.</p>
-        <p>Currently building <strong style="color:var(--green)">setuX</strong> — an AI-powered internship &amp; job matching platform connecting students and companies.</p>
+        <p>I'm an M.Sc. Data Science student at Symbiosis Skills and Professional University, Pune (CGPA 9.02) — with a B.Sc. in Information Technology from Uka Tarsadia University. I thrive at the intersection of data engineering, cloud computing, and business intelligence.</p>
+        <p>My work spans ETL pipeline design, cloud-based ingestion, dimensional data warehousing, and real-time streaming — turning messy, large-scale datasets into reliable, query-ready systems and executive-ready dashboards.</p>
+        <p>I've shipped pipelines processing everything from <strong style="color:var(--green)">10M+ patient records</strong> to <strong style="color:var(--cyan)">3M+ real-time streamed events</strong>, and I'm currently building <strong style="color:var(--pink)">setuX</strong> — an AI-powered internship &amp; job matching platform connecting students and companies.</p>
       </div>
       <div class="contact-block">
         <div class="contact-item">
@@ -653,36 +756,71 @@ footer {
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-card-icon">⟨/⟩</div>
-        <div class="skill-card-title">Languages</div>
+        <div class="skill-card-title">Languages & Libraries</div>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">.NET Core</span>
-          <span class="skill-tag">HTML</span>
-          <span class="skill-tag">CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">PySpark</span>
+          <span class="skill-tag">SQLAlchemy</span>
+          <span class="skill-tag">boto3</span>
+          <span class="skill-tag">psycopg2</span>
+          <span class="skill-tag">confluent-kafka</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">⇄</div>
+        <div class="skill-card-title">Data Engineering</div>
+        <div class="skill-tags">
+          <span class="skill-tag">ETL Pipelines</span>
+          <span class="skill-tag">Data Cleaning</span>
+          <span class="skill-tag">Data Transformation</span>
+          <span class="skill-tag">Data Validation</span>
+          <span class="skill-tag">Data Modelling</span>
+          <span class="skill-tag">Workflow Automation</span>
+          <span class="skill-tag">Data Warehousing</span>
+          <span class="skill-tag">Star Schema</span>
+          <span class="skill-tag">Dimensional Modeling</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon">◫</div>
+        <div class="skill-card-title">Big Data & Streaming</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Apache Spark</span>
+          <span class="skill-tag">Spark SQL</span>
+          <span class="skill-tag">Apache Airflow</span>
+          <span class="skill-tag">Apache Kafka</span>
+          <span class="skill-tag">Real-Time Streaming</span>
+          <span class="skill-tag">Event-Driven Architecture</span>
+          <span class="skill-tag">Batch Processing</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-card-icon">▣</div>
-        <div class="skill-card-title">Databases</div>
+        <div class="skill-card-title">Databases & SQL</div>
         <div class="skill-tags">
-          <span class="skill-tag">MySQL</span>
           <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">phpMyAdmin</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Joins</span>
+          <span class="skill-tag">CTEs</span>
+          <span class="skill-tag">Window Functions</span>
+          <span class="skill-tag">Views &amp; Materialized Views</span>
+          <span class="skill-tag">Indexing</span>
+          <span class="skill-tag">Query Optimization</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <div class="skill-card-icon">◈</div>
-        <div class="skill-card-title">Data & Analytics</div>
+        <div class="skill-card-title">Cloud & Visualization</div>
         <div class="skill-tags">
+          <span class="skill-tag">AWS S3</span>
+          <span class="skill-tag">IAM</span>
           <span class="skill-tag">Power BI</span>
-          <span class="skill-tag">Data Analysis</span>
-          <span class="skill-tag">Data Visualization</span>
-          <span class="skill-tag">Data Preparation</span>
-          <span class="skill-tag">Data Exploration</span>
+          <span class="skill-tag">Business Intelligence</span>
+          <span class="skill-tag">Data Analytics</span>
           <span class="skill-tag">FastAPI</span>
           <span class="skill-tag">XGBoost</span>
         </div>
@@ -691,10 +829,12 @@ footer {
         <div class="skill-card-icon">⬡</div>
         <div class="skill-card-title">Tools & Platforms</div>
         <div class="skill-tags">
-          <span class="skill-tag">Android Studio</span>
-          <span class="skill-tag">Firebase</span>
-          <span class="skill-tag">Cloud Computing</span>
           <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Docker Compose</span>
+          <span class="skill-tag">DBeaver</span>
+          <span class="skill-tag">VS Code</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -710,25 +850,58 @@ footer {
   </div>
 </section>
 
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label">03 &nbsp; EXPERIENCE</div>
+    <h2 class="section-title">WORK <span style="color:var(--cyan)">HISTORY</span></h2>
+    <div class="exp-timeline reveal">
+      <div class="exp-item">
+        <div class="exp-period">JUN 2026 — AUG 2026</div>
+        <div class="exp-role">SQL Developer Intern</div>
+        <div class="exp-org">Maitri Pigments <span class="exp-tag">STARTUP</span></div>
+        <ul class="exp-list">
+          <li>Designed and developed multiple database schemas based on business requirements.</li>
+          <li>Created and managed relational database structures for customer and business data.</li>
+          <li>Wrote SQL queries for data retrieval, reporting, and record management.</li>
+          <li>Assisted in database design, normalization, and schema optimization.</li>
+        </ul>
+      </div>
+      <div class="exp-item">
+        <div class="exp-period">JAN 2026 — APR 2026</div>
+        <div class="exp-role">Data Science Intern</div>
+        <div class="exp-org">Innovexis</div>
+        <ul class="exp-list">
+          <li>Performed data collection, cleaning, and preprocessing using Python.</li>
+          <li>Conducted exploratory data analysis (EDA) and statistical analysis on structured datasets.</li>
+          <li>Assisted in feature engineering and predictive model development.</li>
+          <li>Applied basic machine learning techniques to solve business-related problems.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <div class="section-label">03 &nbsp; PROJECTS</div>
+    <div class="section-label">04 &nbsp; PROJECTS</div>
     <h2 class="section-title">WHAT I'VE <span style="color:var(--pink)">BUILT</span></h2>
     <div class="projects-list">
 
       <div class="project-card reveal">
         <div>
           <div class="project-header">
-            <div class="project-name">AI-Based Internship &amp; Job Matching Platform</div>
+            <div class="project-name">Enterprise Healthcare Data Warehouse</div>
             <div class="project-tech">
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">SQL</span>
               <span class="tech-pill">Python</span>
-              <span class="tech-pill">MySQL</span>
-              <span class="tech-pill">HTML/CSS</span>
-              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">Star Schema</span>
             </div>
           </div>
-          <p class="project-desc">Developing a full-stack web platform <strong style="color:var(--green)">setuX</strong> that connects students and companies — automatically matching student profiles with company requirements and providing resume scoring, job recommendations, and application tracking. Currently live and under active development.</p>
+          <p class="project-desc">Designed and implemented an <strong style="color:var(--green)">Enterprise Healthcare Data Warehouse</strong> using Star Schema architecture — a complete ETL pipeline ingesting, cleaning, validating, and loading <strong style="color:var(--white)">10M+ patient visit records</strong> across 1 fact table and 8 dimension tables. Implemented PKs, FKs, indexes, views, and materialized views, and wrote 131+ business-focused SQL analytics queries powering executive KPI dashboards for revenue, patient satisfaction, and operational efficiency.</p>
         </div>
         <div class="project-num">01</div>
       </div>
@@ -736,16 +909,15 @@ footer {
       <div class="project-card reveal">
         <div>
           <div class="project-header">
-            <div class="project-name">AI-Based E-Commerce Trend Prediction System</div>
+            <div class="project-name">Real-Time Social Media Streaming Pipeline</div>
             <div class="project-tech">
+              <span class="tech-pill">Apache Kafka</span>
+              <span class="tech-pill">Docker</span>
               <span class="tech-pill">Python</span>
-              <span class="tech-pill">FastAPI</span>
               <span class="tech-pill">PostgreSQL</span>
-              <span class="tech-pill">XGBoost</span>
-              <span class="tech-pill">JavaScript</span>
             </div>
           </div>
-          <p class="project-desc">Built <strong style="color:var(--pink)">TrendSphere</strong> — a full-stack application that predicts future product trends using machine learning on user behavior data (views, search, cart, wishlist). Implemented real-time prediction APIs, database integration, and an analytics dashboard for business insights.</p>
+          <p class="project-desc">Built a real-time, event-driven pipeline streaming <strong style="color:var(--white)">3M+ social media records</strong> (Instagram, YouTube, TikTok) through Kafka producers across multiple topics and partitions. Developed a generic Kafka consumer to normalize platform-specific data into a unified schema, loaded to PostgreSQL, with modular config, logging, exception handling, and query-optimized SQL views for analytics.</p>
         </div>
         <div class="project-num">02</div>
       </div>
@@ -753,13 +925,16 @@ footer {
       <div class="project-card reveal">
         <div>
           <div class="project-header">
-            <div class="project-name">ShuttleScore — Badminton Tournament Manager</div>
+            <div class="project-name">Retail Data Lake Analytics Pipeline</div>
             <div class="project-tech">
-              <span class="tech-pill">Android Studio</span>
-              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">PySpark</span>
+              <span class="tech-pill">Spark SQL</span>
+              <span class="tech-pill">Power BI</span>
+              <span class="tech-pill">Java 17</span>
             </div>
           </div>
-          <p class="project-desc">Developed an Android application to manage badminton tournaments and display match scores in real time. Enables organizers to manage matches while allowing users to view live scores and tournament updates.</p>
+          <p class="project-desc">Built a Big Data analytics pipeline in PySpark to process and analyze <strong style="color:var(--white)">1M+ retail sales records</strong> — cleaning, deduplication, date conversion, and large-scale transformation, plus engineered features (profit margin, year, month, quarter). Exported datasets into interactive Power BI dashboards with KPI cards and trend analysis.</p>
+          <a class="project-link" href="https://github.com/Neel-j04/Retail_Data_Lake_Analytics" target="_blank">VIEW ON GITHUB ↗</a>
         </div>
         <div class="project-num">03</div>
       </div>
@@ -767,18 +942,78 @@ footer {
       <div class="project-card reveal">
         <div>
           <div class="project-header">
-            <div class="project-name">SpecZone — E-Commerce Website</div>
+            <div class="project-name">Subscription Box Analytics Pipeline</div>
             <div class="project-tech">
-              <span class="tech-pill">PHP</span>
-              <span class="tech-pill">phpMyAdmin</span>
-              <span class="tech-pill">HTML/CSS</span>
+              <span class="tech-pill">Apache Airflow</span>
+              <span class="tech-pill">Docker</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">MongoDB</span>
             </div>
           </div>
-          <p class="project-desc">Developed a basic e-commerce website for selling spectacles where users can browse products and place orders online. Implemented product listings, user interaction, and database management for storing product information.</p>
+          <p class="project-desc">Built an automated ETL pipeline with Apache Airflow and Docker, processing <strong style="color:var(--white)">16,000+ customer review records</strong> from semi-structured JSONL data. Handled cleaning, timestamp conversion, and sentiment classification with Pandas, orchestrated via Airflow DAGs with retries and scheduling, storing transformed reviews in MongoDB with monitoring and failure recovery.</p>
+          <a class="project-link" href="https://github.com/Neel-j04/Subscription_Box_Analytics_Pipeline" target="_blank">VIEW ON GITHUB ↗</a>
         </div>
         <div class="project-num">04</div>
       </div>
 
+      <div class="project-card reveal">
+        <div>
+          <div class="project-header">
+            <div class="project-name">Cloud Grocery Sales Data Pipeline</div>
+            <div class="project-tech">
+              <span class="tech-pill">AWS S3</span>
+              <span class="tech-pill">IAM</span>
+              <span class="tech-pill">SQLAlchemy</span>
+              <span class="tech-pill">Power BI</span>
+            </div>
+          </div>
+          <p class="project-desc">Built a cloud-based ETL pipeline processing <strong style="color:var(--white)">5,000+ grocery orders</strong>, extracting data directly from Amazon S3 via boto3, transforming and feature-engineering with Pandas, and loading into PostgreSQL through SQLAlchemy. Developed Power BI dashboards analyzing ordering behavior, basket size, and reorder patterns.</p>
+          <a class="project-link" href="https://github.com/Neel-j04/Cloud_Grocery_Sales_Data_Pipeline" target="_blank">VIEW ON GITHUB ↗</a>
+        </div>
+        <div class="project-num">05</div>
+      </div>
+
+      <div class="project-card reveal">
+        <div>
+          <div class="project-header">
+            <div class="project-name">Job Market ETL Pipeline</div>
+            <div class="project-tech">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Power BI</span>
+            </div>
+          </div>
+          <p class="project-desc">Developed an end-to-end ETL pipeline processing <strong style="color:var(--white)">158K+ job records</strong> — handling missing values, salary transformation, and data quality validation before loading into PostgreSQL. Built Power BI dashboards analyzing hiring trends, work-type distribution, salary patterns, and in-demand skills.</p>
+          <a class="project-link" href="https://github.com/Neel-j04/Job_Market_ETL_Pipeline3" target="_blank">VIEW ON GITHUB ↗</a>
+        </div>
+        <div class="project-num">06</div>
+      </div>
+
+    </div>
+
+    <div class="other-projects-header reveal">OTHER BUILDS &amp; APPLICATIONS</div>
+    <div class="other-projects-grid reveal">
+      <div class="mini-project-card">
+        <div class="mini-project-name">setuX</div>
+        <div class="mini-project-desc">AI-powered internship &amp; job matching platform with resume scoring, job recommendations, and application tracking.</div>
+        <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">MySQL</span><span class="tech-pill">JavaScript</span></div>
+      </div>
+      <div class="mini-project-card">
+        <div class="mini-project-name">TrendSphere</div>
+        <div class="mini-project-desc">Full-stack ML platform predicting product trends from user behavior, with real-time prediction APIs and an analytics dashboard.</div>
+        <div class="project-tech"><span class="tech-pill">FastAPI</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">XGBoost</span></div>
+      </div>
+      <div class="mini-project-card">
+        <div class="mini-project-name">ShuttleScore</div>
+        <div class="mini-project-desc">Android app for managing badminton tournaments with real-time match score updates.</div>
+        <div class="project-tech"><span class="tech-pill">Android Studio</span><span class="tech-pill">Firebase</span></div>
+      </div>
+      <div class="mini-project-card">
+        <div class="mini-project-name">SpecZone</div>
+        <div class="mini-project-desc">E-commerce website for spectacles with product listings, ordering, and database-backed inventory.</div>
+        <div class="project-tech"><span class="tech-pill">PHP</span><span class="tech-pill">phpMyAdmin</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -786,7 +1021,7 @@ footer {
 <!-- PUBLICATIONS -->
 <section id="publications">
   <div class="container">
-    <div class="section-label">04 &nbsp; PUBLICATIONS</div>
+    <div class="section-label">05 &nbsp; PUBLICATIONS</div>
     <h2 class="section-title">RESEARCH <span style="color:var(--yellow)">WORK</span></h2>
     <div class="pub-list reveal">
       <div class="pub-item">
@@ -804,14 +1039,14 @@ footer {
 <!-- EDUCATION -->
 <section id="education">
   <div class="container">
-    <div class="section-label">05 &nbsp; EDUCATION</div>
+    <div class="section-label">06 &nbsp; EDUCATION</div>
     <h2 class="section-title">ACADEMIC <span style="color:var(--cyan)">PATH</span></h2>
     <div class="edu-timeline reveal">
       <div class="edu-item">
-        <div class="edu-period">2025 — PRESENT</div>
+        <div class="edu-period">2025 — EXPECTED 2027</div>
         <div class="edu-degree">M.Sc. in Data Science</div>
         <div class="edu-school">Symbiosis Skills and Professional University</div>
-        <div class="edu-meta">PUNE, MAHARASHTRA</div>
+        <div class="edu-meta">PUNE, MAHARASHTRA &nbsp;//&nbsp; CGPA: 9.02</div>
       </div>
       <div class="edu-item">
         <div class="edu-period">COMPLETED — 2025</div>
@@ -826,16 +1061,20 @@ footer {
 <!-- CERTIFICATIONS -->
 <section id="certifications" style="background:var(--bg2);">
   <div class="container">
-    <div class="section-label">06 &nbsp; CERTIFICATIONS</div>
+    <div class="section-label">07 &nbsp; CERTIFICATIONS</div>
     <h2 class="section-title">CREDENTIALS</h2>
     <div class="cert-grid reveal">
       <div class="cert-card">
-        <div class="cert-name">Python Fundamentals for Beginners</div>
-        <div style="margin-top:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--dim);">GREAT LEARNING</div>
+        <div class="cert-name">Deloitte Data Analytics Job Simulation</div>
+        <div style="margin-top:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--dim);">FORAGE &nbsp;//&nbsp; MAY 2026</div>
       </div>
       <div class="cert-card">
         <div class="cert-name">Data Visualization with Power BI</div>
-        <div style="margin-top:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--dim);">MICROSOFT / POWER BI</div>
+        <div style="margin-top:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--dim);">FORAGE &nbsp;//&nbsp; JANUARY 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Python Fundamentals for Beginners</div>
+        <div style="margin-top:8px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--dim);">GREAT LEARNING &nbsp;//&nbsp; SEPTEMBER 2024</div>
       </div>
     </div>
   </div>
